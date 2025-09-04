@@ -1,0 +1,38 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"tasks": {
+		"fmt": {
+			"cache": true
+		},
+		"lint": {
+			"dependsOn": ["fmt"],
+			"cache": true
+		},
+		"typecheck": {
+			"dependsOn": ["fmt"],
+			"cache": true
+		},
+		"check": {
+			"dependsOn": ["fmt", "lint", "typecheck"],
+			"outputs": []
+		},
+		"@withsprinkles/store#build": {
+			"cache": true,
+			"outputs": ["dist/**"]
+		},
+		"sprinkles-doughnut-shoppe#build": {
+			"dependsOn": ["@withsprinkles/store#build"],
+			"cache": true,
+			"outputs": ["dist/**"]
+		},
+		"sprinkles-doughnut-shoppe#dev": {
+			"dependsOn": ["@withsprinkles/store#build"],
+			"cache": false,
+			"persistent": true
+		},
+		"clean": {
+			"cache": false,
+			"outputs": []
+		}
+	}
+}

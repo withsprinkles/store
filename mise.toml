@@ -1,0 +1,16 @@
+[tools]
+bun = "latest"
+node = "lts"
+"npm:@anthropic-ai/claude-code" = "latest"
+
+[settings.npm]
+bun = true
+
+[tasks]
+dev = "bunx turbo run dev"
+build = "bunx turbo run build"
+fmt = "bunx turbo run fmt"
+lint = "bunx turbo run lint"
+typecheck = "bunx turbo run typecheck"
+check = "bunx turbo run check"
+clean = "bunx turbo run clean"

@@ -1,0 +1,22 @@
+{
+	"name": "sprinkles-doughnut-shoppe",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "catalog:react",
+		"react-dom": "catalog:react"
+	},
+	"devDependencies": {
+		"@tailwindcss/vite": "catalog:vite",
+		"@types/react": "catalog:react",
+		"@types/react-dom": "catalog:react",
+		"@vitejs/plugin-react-oxc": "catalog:vite",
+		"tailwindcss": "catalog:ui",
+		"vite": "catalog:vite"
+	}
+}
