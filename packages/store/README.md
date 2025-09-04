@@ -52,6 +52,7 @@ export const viewStore = createStore<ViewState, Partial<ViewState>>(
 Use your store in a component with the hook and it'll update automatically:
 
 ```tsx
+import { useStore } from "@withsprinkles/store";
 import { doughnuts } from "~/lib/data";
 
 export function ShoppingApp() {
@@ -77,7 +78,7 @@ export function ShoppingApp() {
                             onClick={() => viewStore.update({ category: category })}
                             className={view.category === category
                                     ? "bg-pink-600 text-white"
-                                    : "bg-pink-100 text-pink-800 hover:bg-pink-200 dark:bg-pink-900/40 dark:text-pink-200"}
+                                    : "bg-pink-100 text-pink-800"}
                         >
                             {category}
                         </button>
