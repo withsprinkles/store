@@ -1,54 +1,54 @@
 {
-	"name": "@withsprinkles/store",
-	"version": "0.1.1",
-	"type": "module",
-	"workspaces": {
-		"packages": [
-			"packages/*",
-			"apps/*"
-		],
-		"catalog": {
-			"@biomejs/biome": "^2.0.6"
-		},
-		"catalogs": {
-			"react": {
-				"react": "^19.1.0",
-				"react-dom": "^19.1.0",
-				"@types/react": "^19.1.6",
-				"@types/react-dom": "^19.1.5"
-			},
-			"ui": {
-				"tailwindcss": "^4.0.12",
-				"cva": "^1.0.0-beta.4"
-			},
-			"build": {
-				"rolldown-plugin-dts": "^0.13.13",
-				"tsdown": "^0.12.9",
-				"@typescript/native-preview": "latest",
-				"turbo": "^2.3.5"
-			},
-			"vite": {
-				"@tailwindcss/vite": "^4.0.12",
-				"@vitejs/plugin-react-oxc": "^0.3.0",
-				"vite": "npm:rolldown-vite@latest"
-			}
-		}
-	},
-	"devDependencies": {
-		"@biomejs/biome": "catalog:",
-		"@typescript/native-preview": "^7.0.0-dev.20250904.1",
-		"turbo": "catalog:build"
-	},
-	"overrides": {
-		"vite": "npm:rolldown-vite@latest"
-	},
-	"packageManager": "bun@1.1.42",
-	"engines": {
-		"node": ">=22.0.0",
-		"bun": ">=1.1.0"
-	},
-	"trustedDependencies": [
-		"@tailwindcss/oxide",
-		"esbuild"
-	]
+    "name": "@withsprinkles/store",
+    "version": "0.1.1",
+    "type": "module",
+    "workspaces": {
+        "packages": [
+            "packages/*",
+            "apps/*"
+        ],
+        "catalog": {
+            "@biomejs/biome": "^2.0.6"
+        },
+        "catalogs": {
+            "react": {
+                "react": "^19.1.0",
+                "react-dom": "^19.1.0",
+                "@types/react": "^19.1.6",
+                "@types/react-dom": "^19.1.5"
+            },
+            "ui": {
+                "tailwindcss": "^4.0.12",
+                "cva": "^1.0.0-beta.4"
+            },
+            "build": {
+                "rolldown-plugin-dts": "^0.13.13",
+                "tsdown": "^0.12.9",
+                "@typescript/native-preview": "latest",
+                "turbo": "^2.3.5"
+            },
+            "vite": {
+                "@tailwindcss/vite": "^4.0.12",
+                "@vitejs/plugin-react-oxc": "^0.3.0",
+                "vite": "npm:rolldown-vite@latest"
+            }
+        }
+    },
+    "devDependencies": {
+        "@biomejs/biome": "catalog:",
+        "@typescript/native-preview": "^7.0.0-dev.20250904.1",
+        "turbo": "catalog:build"
+    },
+    "overrides": {
+        "vite": "npm:rolldown-vite@latest"
+    },
+    "packageManager": "bun@1.1.42",
+    "engines": {
+        "node": ">=22.0.0",
+        "bun": ">=1.1.0"
+    },
+    "trustedDependencies": [
+        "@tailwindcss/oxide",
+        "esbuild"
+    ]
 }

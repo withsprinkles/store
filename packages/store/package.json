@@ -1,42 +1,42 @@
 {
-	"name": "@withsprinkles/store",
-	"version": "0.1.0",
-	"type": "module",
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js"
-		}
-	},
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"fmt": "biome format --write .",
-		"lint": "biome check --write --unsafe --assist-enabled=true .",
-		"typecheck": "tsc --noEmit",
-		"check": "echo '✅ lo-fi-components is formatted, linted & typechecked'",
-		"check:turbo": "turbo run check --filter=.",
-		"build": "tsdown",
-		"dev:playground": "vite dev --host",
-		"dev:build": "tsdown --watch",
-		"clean": "rm -rf dist node_modules"
-	},
-	"devDependencies": {
-		"@types/react": "catalog:react",
-		"@types/react-dom": "catalog:react",
-		"react": "catalog:react",
-		"react-dom": "catalog:react",
-		"rolldown-plugin-dts": "catalog:build",
-		"tsdown": "catalog:build"
-	},
-	"peerDependencies": {
-		"react": ">=19.1.0",
-		"react-dom": ">=19.1.0",
-		"react-router": ">=7.6.0"
-	},
-	"repository": "https://github.com/withsprinkles/store.git"
+    "name": "@withsprinkles/store",
+    "version": "0.1.1",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "fmt": "biome format --write .",
+        "lint": "biome check --write --unsafe --assist-enabled=true .",
+        "typecheck": "tsc --noEmit",
+        "check": "echo '✅ lo-fi-components is formatted, linted & typechecked'",
+        "check:turbo": "turbo run check --filter=.",
+        "build": "tsdown",
+        "dev:playground": "vite dev --host",
+        "dev:build": "tsdown --watch",
+        "clean": "rm -rf dist node_modules"
+    },
+    "devDependencies": {
+        "@types/react": "catalog:react",
+        "@types/react-dom": "catalog:react",
+        "react": "catalog:react",
+        "react-dom": "catalog:react",
+        "rolldown-plugin-dts": "catalog:build",
+        "tsdown": "catalog:build"
+    },
+    "peerDependencies": {
+        "react": ">=19.1.0",
+        "react-dom": ">=19.1.0",
+        "react-router": ">=7.6.0"
+    },
+    "repository": "https://github.com/withsprinkles/store.git"
 }
