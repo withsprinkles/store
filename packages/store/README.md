@@ -32,7 +32,7 @@ export function createStore<Value, Action>(
 export function useStore<Value, Action>(store: Store<Value, Action>): Value;
 ```
 
-You can see an example usage of this store API in the demo application at [`/apps/sprinkles-doughnut-shoppe`](/apps/sprinkles-doughnut-shoppe) with a [live example here]().
+You can see an example usage of this store API in the demo application at [`/apps/sprinkles-doughnut-shoppe`](/apps/sprinkles-doughnut-shoppe) with a [live example here](https://store.mark-malstrom.workers.dev).
 
 ## Usage
 
