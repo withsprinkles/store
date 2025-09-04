@@ -12,6 +12,7 @@ export function ShoppingApp() {
 		"All",
 		...Array.from(new Set(doughnuts.map((d) => d.category))),
 	];
+
 	const filtered =
 		view.category === "All"
 			? doughnuts
