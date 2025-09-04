@@ -1,0 +1,47 @@
+name: 🛠️ Build & Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  deployments: write
+
+# use the GitHub repo name as the Pages project name
+env:
+  PROJECT_NAME: ${{ github.event.repository.name }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Mise
+        uses: jdx/mise-action@v2
+
+      - name: 🗄️ Cache Bun dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: 📦 Install dependencies
+        run: bun install
+
+      - name: ⚒️ Build
+        run: mise run build
+
+      - name: ☁️ Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3.14.1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --name=${{ env.PROJECT_NAME }} --config=apps/sprinkles-doughnut-shoppe/wrangler.jsonc
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
